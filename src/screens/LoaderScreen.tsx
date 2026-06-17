@@ -54,8 +54,6 @@ export function LoaderScreen({onComplete}: LoaderScreenProps) {
         source={icons.loaderBg}
         style={styles.LoaderScreenBackground}
         resizeMode="cover">
-        <View style={styles.LoaderScreenOverlayVeil} />
-
         <View style={styles.LoaderScreenContent}>
           <Image
             source={icons.loaderLogo}
@@ -63,7 +61,6 @@ export function LoaderScreen({onComplete}: LoaderScreenProps) {
             resizeMode="contain"
           />
 
-          <Text style={styles.LoaderScreenBrandFiligree}>{APP_BRAND_LINE}</Text>
           <Text style={styles.LoaderScreenTitleFiligree}>{APP_FULL_TITLE}</Text>
           <Text style={styles.LoaderScreenStatusFiligree}>
             Preparing your opening access…
@@ -103,6 +100,9 @@ const styles = StyleSheet.create({
   },
   LoaderScreenLogoSigil: {
     marginBottom: 24,
+    width: 200,
+    height: 200,
+    borderRadius: 50,
   },
   LoaderScreenBrandFiligree: {
     color: colors.gold,

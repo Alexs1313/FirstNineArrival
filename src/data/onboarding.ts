@@ -18,7 +18,7 @@ export const ONBOARDING_STEPS: OnboardingStep[] = [
     overlay: onboardingOverlays.step1,
     title: 'Your Arrival Starts Here',
     description:
-      'Open your digital Opening Event Pass and keep your guest access ready for the Nine Casino launch night.',
+      'Open your digital Opening Event Pass and keep your guest access ready for opening night.',
     buttonLabel: 'Next',
     tags: ['Guest Access', 'Opening Night', 'VIP Entry'],
     overlayWidthRatio: 0.71,

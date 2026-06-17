@@ -5,6 +5,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {MenuListCard} from '../components/menu/MenuCards';
 import {MenuScreenHeader} from '../components/menu/MenuScreenHeader';
+import {APP_BRAND_LINE} from '../constants/brand';
 import {OPENING_MENU} from '../data/menu';
 import {useMenu} from '../context/MenuContext';
 import {useAppNavigation} from '../navigation/NavigationContext';
@@ -25,7 +26,7 @@ export function MenuScreen() {
         showsVerticalScrollIndicator={false}>
         <LinearGradient colors={['#131228', colors.surface]}>
           <MenuScreenHeader
-            eyebrow="NINE CASINO"
+            eyebrow={APP_BRAND_LINE}
             title="Opening Menu"
             subtitle="Browse items, add to order, and send your request."
             cartCount={cartItemCount}

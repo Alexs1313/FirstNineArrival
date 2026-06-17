@@ -20,6 +20,7 @@ import {
 } from '../data/services';
 import {useServices} from '../context/ServicesContext';
 import {useAppNavigation} from '../navigation/NavigationContext';
+import {APP_BRAND_LINE} from '../constants/brand';
 import {colors, fonts, layout} from '../constants/theme';
 
 export function ServicesScreen() {
@@ -68,7 +69,7 @@ export function ServicesScreen() {
             <View style={styles.ServicesScreenHeaderRowLintel}>
               <View style={styles.ServicesScreenHeaderTextEnclave}>
                 <Text style={styles.ServicesScreenEyebrowFiligree}>
-                  NINE CASINO
+                  {APP_BRAND_LINE}
                 </Text>
                 <Text style={styles.ServicesScreenTitleFiligree}>Services</Text>
                 <Text style={styles.ServicesScreenSubtitleFiligree}>

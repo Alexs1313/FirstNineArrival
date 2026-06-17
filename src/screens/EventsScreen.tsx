@@ -38,7 +38,7 @@ export function EventsScreen() {
                   Opening Events
                 </Text>
                 <Text style={styles.EventsScreenSubtitleFiligree}>
-                  Explore the full Nine Casino opening plan.
+                  Explore the full opening night plan.
                 </Text>
               </View>
               <SavedChipButton onPress={openSavedEvents} />

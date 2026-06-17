@@ -30,7 +30,7 @@ export function PassScreen() {
           <Text style={styles.PassScreenWelcomeFiligree}>WELCOME TO</Text>
           <Text style={styles.PassScreenTitleFiligree}>{APP_DISPLAY_NAME}</Text>
           <Text style={styles.PassScreenSubtitleFiligree}>
-            Your guest access for the Nine Casino arrival.
+            Your guest access for the opening night arrival.
           </Text>
         </View>
 

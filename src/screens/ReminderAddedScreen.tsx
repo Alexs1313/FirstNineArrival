@@ -24,82 +24,68 @@ export function ReminderAddedScreen({eventId}: ReminderAddedScreenProps) {
   }
 
   return (
-    <View style={styles.ReminderAddedScreenFacetChassis}>
-      <ScrollView
-        contentContainerStyle={[
-          styles.ReminderAddedScreenScrollContent,
-          {
-            paddingTop: insets.top + 32,
-            paddingBottom: insets.bottom + 32,
-          },
-        ]}
-        showsVerticalScrollIndicator={false}>
-        <View style={styles.ReminderAddedScreenIconEnclave}>
-          <Text style={styles.ReminderAddedScreenIconSigil}>🔔</Text>
-        </View>
+    <ScrollView
+      contentContainerStyle={[styles.ReminderAddedScreenScrollContent]}
+      showsVerticalScrollIndicator={false}>
+      <View style={styles.ReminderAddedScreenIconEnclave}>
+        <Text style={styles.ReminderAddedScreenIconSigil}>🔔</Text>
+      </View>
 
-        <Text style={styles.ReminderAddedScreenTitleFiligree}>
-          Reminder Added
-        </Text>
-        <Text style={styles.ReminderAddedScreenSubtitleFiligree}>
-          You will be reminded before this opening event begins.
-        </Text>
+      <Text style={styles.ReminderAddedScreenTitleFiligree}>
+        Reminder Added
+      </Text>
+      <Text style={styles.ReminderAddedScreenSubtitleFiligree}>
+        You will be reminded before this opening event begins.
+      </Text>
 
-        <View style={styles.ReminderAddedScreenEventCard}>
-          <Text style={styles.ReminderAddedScreenEventTitleFiligree}>
-            {event.title}
-          </Text>
-          <View style={styles.ReminderAddedScreenEventMetaLintel}>
-            <View style={styles.ReminderAddedScreenEventMetaCell}>
-              <Text style={styles.ReminderAddedScreenEventMetaIconSigil}>
-                🕐
-              </Text>
-              <Text style={styles.ReminderAddedScreenEventTimeFiligree}>
-                {event.time}
-              </Text>
-            </View>
-            <View style={styles.ReminderAddedScreenEventMetaCell}>
-              <Text style={styles.ReminderAddedScreenEventMetaIconSigil}>
-                📍
-              </Text>
-              <Text style={styles.ReminderAddedScreenEventLocationFiligree}>
-                {event.location}
-              </Text>
-            </View>
+      <View style={styles.ReminderAddedScreenEventCard}>
+        <Text style={styles.ReminderAddedScreenEventTitleFiligree}>
+          {event.title}
+        </Text>
+        <View style={styles.ReminderAddedScreenEventMetaLintel}>
+          <View style={styles.ReminderAddedScreenEventMetaCell}>
+            <Text style={styles.ReminderAddedScreenEventMetaIconSigil}>🕐</Text>
+            <Text style={styles.ReminderAddedScreenEventTimeFiligree}>
+              {event.time}
+            </Text>
+          </View>
+          <View style={styles.ReminderAddedScreenEventMetaCell}>
+            <Text style={styles.ReminderAddedScreenEventMetaIconSigil}>📍</Text>
+            <Text style={styles.ReminderAddedScreenEventLocationFiligree}>
+              {event.location}
+            </Text>
           </View>
         </View>
+      </View>
 
-        <View style={styles.ReminderAddedScreenActionsLintel}>
-          <PrimaryButton
-            label="Back to Event"
-            onPress={() => backToEvent(eventId)}
-            fullWidth
-            compact
-          />
-          <OutlineButton
-            label="View Saved Events"
-            onPress={openSavedEvents}
-            fullWidth
-            compact
-            tone="gold"
-          />
-        </View>
-      </ScrollView>
-    </View>
+      <View style={styles.ReminderAddedScreenActionsLintel}>
+        <PrimaryButton
+          label="Back to Event"
+          onPress={() => backToEvent(eventId)}
+          fullWidth
+          compact
+        />
+        <OutlineButton
+          label="View Saved Events"
+          onPress={openSavedEvents}
+          fullWidth
+          compact
+          tone="gold"
+        />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  ReminderAddedScreenFacetChassis: {
-    backgroundColor: colors.surface,
-    flex: 1,
-  },
   ReminderAddedScreenScrollContent: {
     alignItems: 'center',
     gap: 5,
     paddingHorizontal: 24,
     justifyContent: 'center',
-    flex: 1,
+    padding: 20,
+    flexGrow: 1,
+    backgroundColor: colors.surface,
   },
   ReminderAddedScreenIconEnclave: {
     alignItems: 'center',
