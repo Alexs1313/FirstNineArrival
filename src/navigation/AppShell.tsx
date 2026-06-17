@@ -2,6 +2,8 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
 import {TabBar} from '../components/nav/TabBar';
+
+//screens
 import {AddedToOrderScreen} from '../screens/AddedToOrderScreen';
 import {EntryRulesScreen} from '../screens/EntryRulesScreen';
 import {EventDetailScreen} from '../screens/EventDetailScreen';
@@ -27,6 +29,7 @@ import {SavedEventsScreen} from '../screens/SavedEventsScreen';
 import {SavedOffersScreen} from '../screens/SavedOffersScreen';
 import {PassScreen} from '../screens/PassScreen';
 import {ServicesScreen} from '../screens/ServicesScreen';
+//components
 import {colors} from '../constants/theme';
 import {useAppNavigation} from './NavigationContext';
 
@@ -118,9 +121,7 @@ function MainShell() {
           <OverlayContent />
         </View>
       )}
-      {showTabBar && (
-        <TabBar activeTab={activeTab} onSelectTab={selectTab} />
-      )}
+      {showTabBar && <TabBar activeTab={activeTab} onSelectTab={selectTab} />}
     </View>
   );
 }

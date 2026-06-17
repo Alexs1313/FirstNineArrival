@@ -281,7 +281,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oajksnd.firstarrival;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akfadklm.ninearrival;
 				PRODUCT_NAME = FirstNineArrival;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -313,7 +313,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.oajksnd.firstarrival;
+				PRODUCT_BUNDLE_IDENTIFIER = com.akfadklm.ninearrival;
 				PRODUCT_NAME = FirstNineArrival;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

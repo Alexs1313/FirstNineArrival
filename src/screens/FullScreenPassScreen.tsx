@@ -40,7 +40,9 @@ function DetailCell({
 
 export function FullScreenPassScreen() {
   const {openEntryRules} = useAppNavigation();
+
   const insets = useSafeAreaInsets();
+
   const adaptive = useAdaptive();
   const {passId} = useApp();
   const {isMaxBrightness, toggleBrightness} = useBrightnessToggle();
@@ -168,6 +170,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     textTransform: 'uppercase',
   },
+
   FullScreenPassScreenTitleFiligree: {
     color: colors.cream,
     fontFamily: fonts.sansBold,
@@ -193,6 +196,7 @@ const styles = StyleSheet.create({
     flexWrap: 'wrap',
     rowGap: 12,
   },
+
   FullScreenPassScreenDetailCell: {
     gap: 1,
     width: '50%',

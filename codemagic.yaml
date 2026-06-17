@@ -4,7 +4,7 @@ workflows:
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: FirstArrivalAPIKey
+      app_store_connect: NineFirstArrivalAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
@@ -14,7 +14,7 @@ workflows:
         BUNDLE_ID: com.oajksnd.firstarrival
         XCODE_WORKSPACE: FirstNineArrival.xcworkspace
         XCODE_SCHEME: FirstNineArrival
-        APP_STORE_APPLE_ID: 6781220086
+        APP_STORE_APPLE_ID: 6781401728
     scripts:
       - name: Install npm dependencies
         script: |

@@ -54,8 +54,6 @@ export function LoaderScreen({onComplete}: LoaderScreenProps) {
         source={icons.loaderBg}
         style={styles.LoaderScreenBackground}
         resizeMode="cover">
-        <View style={styles.LoaderScreenOverlayVeil} />
-
         <View style={styles.LoaderScreenContent}>
           <Image
             source={icons.loaderLogo}

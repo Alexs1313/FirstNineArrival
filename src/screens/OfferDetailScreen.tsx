@@ -19,12 +19,14 @@ export function OfferDetailScreen({offerId}: OfferDetailScreenProps) {
   const {openOfferRequestSent} = useAppNavigation();
   const {isOfferSaved, toggleSaved, requestOffer} = useOffers();
   const offerToDisplay = getOfferById(offerId);
+
+  if (!offerToDisplay) {
+    return null;
+  }
+
   const saved = isOfferSaved(offerId);
 
   const handleRequest = () => {
-    if (!offerToDisplay) {
-      return;
-    }
     requestOffer(offerId);
     openOfferRequestSent();
   };
@@ -45,9 +47,9 @@ export function OfferDetailScreen({offerId}: OfferDetailScreenProps) {
 
         <OfferHeroCard offer={offerToDisplay} />
 
-        <OfferSectionCard title="What is Included" body={offer.included} />
-        <OfferSectionCard title="How to Request" body={offer.howToRequest} />
-        <OfferSectionCard title="Terms & Conditions" body={offer.terms} />
+        <OfferSectionCard title="What is Included" body={offerToDisplay.included} />
+        <OfferSectionCard title="How to Request" body={offerToDisplay.howToRequest} />
+        <OfferSectionCard title="Terms & Conditions" body={offerToDisplay.terms} />
 
         <PrimaryButton
           label="Request This Offer"
