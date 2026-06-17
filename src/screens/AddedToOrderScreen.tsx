@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import {ScrollView, StyleSheet, Text, View} from 'react-native';
+
 import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {
@@ -7,6 +8,7 @@ import {
   PrimaryButton,
 } from '../components/buttons/PrimaryButton';
 import {formatEuro, getMenuItemById} from '../data/menu';
+
 import {useMenu} from '../context/MenuContext';
 import {useAppNavigation} from '../navigation/NavigationContext';
 import {colors, fonts} from '../constants/theme';
@@ -115,6 +117,7 @@ const styles = StyleSheet.create({
     marginBottom: 8,
     textAlign: 'center',
   },
+
   AddedToOrderScreenItemFiligree: {
     color: colors.body,
     fontFamily: fonts.sansRegular,

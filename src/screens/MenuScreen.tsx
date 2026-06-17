@@ -23,9 +23,7 @@ export function MenuScreen() {
           {paddingBottom: insets.bottom + layout.screenPadding},
         ]}
         showsVerticalScrollIndicator={false}>
-        <LinearGradient
-          colors={['#131228', colors.surface]}
-          style={styles.MenuScreenHeaderGradient}>
+        <LinearGradient colors={['#131228', colors.surface]}>
           <MenuScreenHeader
             eyebrow="NINE CASINO"
             title="Opening Menu"

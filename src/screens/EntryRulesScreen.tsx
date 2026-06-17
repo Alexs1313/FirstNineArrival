@@ -4,6 +4,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {SubScreenHeader} from '../components/nav/SubScreenHeader';
 import {ENTRY_RULES} from '../data/entryRules';
+
 import {colors, fonts} from '../constants/theme';
 
 export function EntryRulesScreen() {

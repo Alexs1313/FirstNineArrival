@@ -10,28 +10,24 @@ import {
 
 import {APP_BRAND_LINE, APP_FULL_TITLE} from '../constants/brand';
 import {icons} from '../data/assets';
-import {useAdaptive} from '../hooks/useAdaptive';
 import {colors, fonts} from '../constants/theme';
-
-const LOADER_DURATION_MS = 5000;
 
 type LoaderScreenProps = {
   onComplete: () => void;
 };
 
 export function LoaderScreen({onComplete}: LoaderScreenProps) {
-  const adaptive = useAdaptive();
   const progress = useRef(new Animated.Value(0)).current;
-  const [percentLabel, setPercentLabel] = useState(0);
+  const [percentLabelToDisplay, setPercentLabelToDisplay] = useState(0);
 
   useEffect(() => {
     const listenerId = progress.addListener(({value}) => {
-      setPercentLabel(Math.round(value * 100));
+      setPercentLabelToDisplay(Math.round(value * 100));
     });
 
     const animation = Animated.timing(progress, {
       toValue: 1,
-      duration: LOADER_DURATION_MS,
+      duration: 5000,
       useNativeDriver: false,
     });
 
@@ -79,7 +75,7 @@ export function LoaderScreen({onComplete}: LoaderScreenProps) {
             />
           </View>
           <Text style={styles.LoaderScreenPercentFiligree}>
-            {percentLabel}%
+            {percentLabelToDisplay}%
           </Text>
         </View>
       </ImageBackground>

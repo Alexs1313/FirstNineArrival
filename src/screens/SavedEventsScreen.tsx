@@ -12,6 +12,7 @@ import {colors, fonts} from '../constants/theme';
 export function SavedEventsScreen() {
   const insets = useSafeAreaInsets();
   const {openEventDetail} = useAppNavigation();
+
   const {savedEventIds, savedCount} = useEvents();
   const savedEvents = OPENING_EVENTS.filter(event =>
     savedEventIds.includes(event.id),

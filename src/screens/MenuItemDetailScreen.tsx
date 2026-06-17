@@ -18,16 +18,17 @@ export function MenuItemDetailScreen({itemId}: MenuItemDetailScreenProps) {
   const insets = useSafeAreaInsets();
   const {openAddedToOrder} = useAppNavigation();
   const item = getMenuItemById(itemId);
-  const [quantity, setQuantity] = useState(0);
+  const [orderQuantityToDisplay, setOrderQuantityToDisplay] = useState(0);
 
   if (!item) {
     return null;
   }
 
-  const lineTotal = item.price * Math.max(quantity, 1);
+  const lineTotal = item.price * Math.max(orderQuantityToDisplay, 1);
 
   const handleAdd = () => {
-    const nextQuantity = quantity > 0 ? quantity : 1;
+    const nextQuantity =
+      orderQuantityToDisplay > 0 ? orderQuantityToDisplay : 1;
     openAddedToOrder(itemId, nextQuantity);
   };
 
@@ -69,21 +70,23 @@ export function MenuItemDetailScreen({itemId}: MenuItemDetailScreenProps) {
           <Text style={styles.MenuItemDetailScreenQuantityLabel}>Quantity</Text>
           <View style={styles.MenuItemDetailScreenQuantityRow}>
             <QuantityStepper
-              quantity={quantity}
+              quantity={orderQuantityToDisplay}
               onDecrease={() =>
-                setQuantity(current => Math.max(0, current - 1))
+                setOrderQuantityToDisplay(current => Math.max(0, current - 1))
               }
-              onIncrease={() => setQuantity(current => current + 1)}
+              onIncrease={() =>
+                setOrderQuantityToDisplay(current => current + 1)
+              }
             />
             <Text style={styles.MenuItemDetailScreenLineTotalFiligree}>
-              {formatEuro(quantity > 0 ? lineTotal : item.price)}
+              {formatEuro(orderQuantityToDisplay > 0 ? lineTotal : item.price)}
             </Text>
           </View>
         </View>
 
         <PrimaryButton
           label={`+ Add to Order • ${formatEuro(
-            quantity > 0 ? lineTotal : item.price,
+            orderQuantityToDisplay > 0 ? lineTotal : item.price,
           )}`}
           onPress={handleAdd}
           fullWidth
@@ -103,6 +106,7 @@ const styles = StyleSheet.create({
     gap: 10,
     paddingHorizontal: 20,
   },
+
   MenuItemDetailScreenHeaderWrap: {
     alignSelf: 'stretch',
     marginHorizontal: -20,
@@ -142,6 +146,7 @@ const styles = StyleSheet.create({
     lineHeight: 22,
     marginBottom: 6,
   },
+
   MenuItemDetailScreenQuantityCard: {
     backgroundColor: colors.surfaceRaised,
     borderColor: colors.borderMuted,
@@ -150,6 +155,7 @@ const styles = StyleSheet.create({
     gap: 12,
     padding: 17,
   },
+
   MenuItemDetailScreenQuantityLabel: {
     color: colors.label,
     fontFamily: fonts.sansRegular,

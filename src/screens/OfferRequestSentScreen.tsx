@@ -8,11 +8,13 @@ import {
 } from '../components/buttons/PrimaryButton';
 import {getOfferById} from '../data/offers';
 import {useOffers} from '../context/OffersContext';
+
 import {useAppNavigation} from '../navigation/NavigationContext';
 import {colors, fonts} from '../constants/theme';
 
 export function OfferRequestSentScreen() {
   const insets = useSafeAreaInsets();
+
   const {closeOverlay, openSavedOffers} = useAppNavigation();
   const {lastRequestedOfferId} = useOffers();
   const offer = lastRequestedOfferId

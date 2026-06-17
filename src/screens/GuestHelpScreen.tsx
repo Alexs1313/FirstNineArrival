@@ -25,7 +25,9 @@ import {colors, fonts} from '../constants/theme';
 export function GuestHelpScreen() {
   const insets = useSafeAreaInsets();
   const scrollRef = useRef<ScrollView>(null);
-  const [messages, setMessages] = useState<ChatMessage[]>(INITIAL_CHAT);
+
+  const [messagesToDisplay, setMessagesToDisplay] =
+    useState<ChatMessage[]>(INITIAL_CHAT);
   const [draft, setDraft] = useState('');
 
   const sendMessage = (text: string) => {
@@ -45,7 +47,11 @@ export function GuestHelpScreen() {
       text: findHelpReply(trimmed),
     };
 
-    setMessages(current => [...current, userMessage, assistantMessage]);
+    setMessagesToDisplay(current => [
+      ...current,
+      userMessage,
+      assistantMessage,
+    ]);
     setDraft('');
 
     requestAnimationFrame(() => {
@@ -69,7 +75,7 @@ export function GuestHelpScreen() {
         onContentSizeChange={() =>
           scrollRef.current?.scrollToEnd({animated: true})
         }>
-        {messages.map(message => (
+        {messagesToDisplay.map(message => (
           <ChatBubble key={message.id} message={message} />
         ))}
       </ScrollView>

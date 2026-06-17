@@ -18,19 +18,16 @@ export function OfferDetailScreen({offerId}: OfferDetailScreenProps) {
   const insets = useSafeAreaInsets();
   const {openOfferRequestSent} = useAppNavigation();
   const {isOfferSaved, toggleSaved, requestOffer} = useOffers();
-  const offer = getOfferById(offerId);
-
-  if (!offer) {
-    return null;
-  }
-
+  const offerToDisplay = getOfferById(offerId);
   const saved = isOfferSaved(offerId);
 
   const handleRequest = () => {
+    if (!offerToDisplay) {
+      return;
+    }
     requestOffer(offerId);
     openOfferRequestSent();
   };
-
   return (
     <View style={styles.OfferDetailScreenFacetChassis}>
       <ScrollView
@@ -46,7 +43,7 @@ export function OfferDetailScreen({offerId}: OfferDetailScreenProps) {
           />
         </View>
 
-        <OfferHeroCard offer={offer} />
+        <OfferHeroCard offer={offerToDisplay} />
 
         <OfferSectionCard title="What is Included" body={offer.included} />
         <OfferSectionCard title="How to Request" body={offer.howToRequest} />

@@ -56,7 +56,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with citrus tonic, sparkling mineral water, or dry white wine.',
     allergenNote: 'Contains dairy, gluten, eggs. May contain celery.',
-    image: require('../assets/first_arrival_midnight_truffle_arancini.png'),
+    image: require('../assets/guest_arrival_midnight_truffle_arancini.png'),
   },
   {
     id: 'velvet-beet-carpaccio',
@@ -70,7 +70,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with elderflower spritz, herbal tea, or light sparkling wine.',
     allergenNote: 'Contains dairy. May contain nuts and sesame.',
-    image: require('../assets/first_arrival_velvet_beet_carpaccio.png'),
+    image: require('../assets/guest_arrival_velvet_beet_carpaccio.png'),
   },
   {
     id: 'black-sesame-salmon-tartlet',
@@ -84,7 +84,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with yuzu tonic, sparkling water, or champagne-style sparkling wine.',
     allergenNote: 'Contains fish, gluten, sesame, dairy.',
-    image: require('../assets/first_arrival_black_sesame_salmon_tartlet.png'),
+    image: require('../assets/guest_arrival_black_sesame_salmon_tartlet.png'),
   },
   {
     id: 'charred-pear-burrata-plate',
@@ -97,7 +97,7 @@ export const OPENING_MENU: MenuItem[] = [
       'Pear, burrata, honey glaze, basil oil, toasted crumbs, cracked pepper',
     pairing: 'Pairs well with pear mocktail, white grape juice, or prosecco.',
     allergenNote: 'Contains dairy and gluten. May contain nuts.',
-    image: require('../assets/first_arrival_charred_pear_and_burrata_plate.png'),
+    image: require('../assets/guest_arrival_charred_pear_and_burrata_plate.png'),
   },
   {
     id: 'saffron-chicken-lantern-skewers',
@@ -109,7 +109,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Chicken, saffron, lemon, almond crumble, herbs, smoked yogurt',
     pairing: 'Pairs well with iced tea, citrus soda, or light lager.',
     allergenNote: 'Contains dairy and nuts. May contain mustard.',
-    image: require('../assets/first_arrival_saffron_chicken_lantern_skewers.png'),
+    image: require('../assets/guest_arrival_saffron_chicken_lantern_skewers.png'),
   },
   {
     id: 'crispy-sea-bass-lotus-taco',
@@ -123,7 +123,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with cucumber mint cooler, sparkling water, or dry white wine.',
     allergenNote: 'Contains fish, gluten, dairy. May contain sulphites.',
-    image: require('../assets/first_arrival_crispy_sea_bass_lotus_taco.png'),
+    image: require('../assets/guest_arrival_crispy_sea_bass_lotus_taco.png'),
   },
   {
     id: 'caviar-potato-clouds',
@@ -137,7 +137,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with champagne-style sparkling wine, mineral water, or lemon tonic.',
     allergenNote: 'Contains fish and dairy.',
-    image: require('../assets/first_arrival_caviar_potato_clouds.png'),
+    image: require('../assets/guest_arrival_caviar_potato_clouds.png'),
   },
   {
     id: 'espresso-cocoa-short-rib-slider',
@@ -149,7 +149,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Short rib, espresso glaze, cocoa notes, brioche, shallot, herb mayo',
     pairing: 'Pairs well with cola, dark berry mocktail, or red wine.',
     allergenNote: 'Contains gluten, eggs, dairy. May contain mustard.',
-    image: require('../assets/first_arrival_espresso_cocoa_short_rib_slider.png'),
+    image: require('../assets/guest_arrival_espresso_cocoa_short_rib_slider.png'),
   },
   {
     id: 'golden-fig-halloumi-stack',
@@ -161,7 +161,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Halloumi, figs, pistachio, honey, mint, olive oil',
     pairing: 'Pairs well with peach iced tea, sparkling water, or rosé wine.',
     allergenNote: 'Contains dairy and nuts.',
-    image: require('../assets/first_arrival_golden_fig_halloumi_stack.png'),
+    image: require('../assets/guest_arrival_golden_fig_halloumi_stack.png'),
   },
   {
     id: 'pearl-citrus-granita',
@@ -173,7 +173,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Lemon, orange, lime, fruit pearls, mint, light syrup',
     pairing: 'Pairs well with espresso, green tea, or sparkling water.',
     allergenNote: 'May contain traces of sulphites.',
-    image: require('../assets/first_arrival_pearl_citrus_granita.png'),
+    image: require('../assets/guest_arrival_pearl_citrus_granita.png'),
   },
   {
     id: 'black-cherry-basque-slice',
@@ -185,7 +185,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Cream cheese, vanilla, black cherry, caramelized top, biscuit crumb',
     pairing: 'Pairs well with coffee, cherry mocktail, or dessert wine.',
     allergenNote: 'Contains dairy, eggs, gluten.',
-    image: require('../assets/first_arrival_black_cherry_basque_slice.png'),
+    image: require('../assets/guest_arrival_black_cherry_basque_slice.png'),
   },
   {
     id: 'amber-yuzu-tonic',
@@ -197,7 +197,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Yuzu, citrus syrup, tonic water, rosemary, ice, orange peel',
     pairing: 'Pairs well with seafood bites, tartlets, and light starters.',
     allergenNote: 'May contain sulphites.',
-    image: require('../assets/first_arrival_amber_yuzu_tonic.png'),
+    image: require('../assets/guest_arrival_amber_yuzu_tonic.png'),
   },
   {
     id: 'blueberry-basil-night-fizz',
@@ -209,7 +209,7 @@ export const OPENING_MENU: MenuItem[] = [
     ingredients: 'Blueberry, basil, lime, soda, light syrup, crushed ice',
     pairing: 'Pairs well with grilled cheese plates, desserts, and warm bites.',
     allergenNote: 'May contain traces of sulphites.',
-    image: require('../assets/first_arrival_blueberry_basil_night_fizz.png'),
+    image: require('../assets/guest_arrival_blueberry_basil_night_fizz.png'),
   },
   {
     id: 'smoked-pear-velvet-cooler',
@@ -222,7 +222,7 @@ export const OPENING_MENU: MenuItem[] = [
     pairing:
       'Pairs well with burrata, halloumi, chicken skewers, or cheesecake.',
     allergenNote: 'No major allergens declared. Ask staff for details.',
-    image: require('../assets/first_arrival_smoked_pear_velvet_cooler.png'),
+    image: require('../assets/guest_arrival_smoked_pear_velvet_cooler.png'),
   },
 ];
 

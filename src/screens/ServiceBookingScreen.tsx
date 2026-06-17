@@ -10,6 +10,7 @@ import {
   PriorityToggle,
   ServiceFormField,
 } from '../components/services/ServiceCards';
+
 import {ServiceInfoCard} from '../components/services/RequestDetailCard';
 import {getVenueServiceById} from '../data/services';
 import {useServices} from '../context/ServicesContext';
@@ -59,7 +60,10 @@ export function ServiceBookingScreen({
 
   const [date, setDate] = useState(initial.date);
   const [time, setTime] = useState(initial.time);
-  const [guestCount, setGuestCount] = useState(initial.guestCount);
+
+  const [guestCountToDisplay, setGuestCountToDisplay] = useState(
+    initial.guestCount,
+  );
   const [contactName, setContactName] = useState(initial.contactName);
   const [preferredZone, setPreferredZone] = useState(initial.preferredZone);
   const [notes, setNotes] = useState(initial.notes);
@@ -75,7 +79,7 @@ export function ServiceBookingScreen({
     const input = {
       date,
       time,
-      guestCount,
+      guestCount: guestCountToDisplay,
       contactName,
       preferredZone,
       notes,
@@ -140,8 +144,8 @@ export function ServiceBookingScreen({
         />
         <ServiceFormField
           label="NUMBER OF GUESTS"
-          value={guestCount}
-          onChangeText={setGuestCount}
+          value={guestCountToDisplay}
+          onChangeText={setGuestCountToDisplay}
           placeholder="e.g. 2"
         />
         <ServiceFormField

@@ -110,6 +110,7 @@ const styles = StyleSheet.create({
     gap: 12,
     padding: 16,
   },
+
   MyMenuOrdersScreenOrderTopRow: {
     alignItems: 'flex-start',
     flexDirection: 'row',
@@ -138,6 +139,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
+
   MyMenuOrdersScreenOrderDateFiligree: {
     color: colors.label,
     fontFamily: fonts.sansRegular,
