@@ -101,6 +101,8 @@ const styles = StyleSheet.create({
   },
   LoaderScreenLogoSigil: {
     marginBottom: 24,
+    width: 290,
+    height: 290,
   },
   LoaderScreenBrandFiligree: {
     color: colors.gold,
