@@ -19,54 +19,48 @@ export function PassScreen() {
   const {isMaxBrightness, toggleBrightness} = useBrightnessToggle();
 
   return (
-    <View style={styles.PassScreenFacetChassis}>
-      <ScrollView
-        contentContainerStyle={[
-          styles.PassScreenScrollContent,
-          {paddingTop: insets.top + 16},
-        ]}
-        showsVerticalScrollIndicator={false}>
-        <View style={styles.PassScreenHeader}>
-          <Text style={styles.PassScreenWelcomeFiligree}>WELCOME TO</Text>
-          <Text style={styles.PassScreenTitleFiligree}>{APP_DISPLAY_NAME}</Text>
-          <Text style={styles.PassScreenSubtitleFiligree}>
-            Your guest access for the opening night arrival.
-          </Text>
-        </View>
+    <ScrollView
+      contentContainerStyle={[
+        styles.PassScreenScrollContent,
+        {paddingTop: insets.top + 16},
+      ]}
+      showsVerticalScrollIndicator={false}>
+      <View style={styles.PassScreenHeader}>
+        <Text style={styles.PassScreenWelcomeFiligree}>WELCOME TO</Text>
+        <Text style={styles.PassScreenTitleFiligree}>{APP_DISPLAY_NAME}</Text>
+        <Text style={styles.PassScreenSubtitleFiligree}>
+          Your guest access for the opening night arrival.
+        </Text>
+      </View>
 
-        <OpeningPassCard passId={passId} onShowFullPass={openFullScreenPass} />
+      <OpeningPassCard passId={passId} onShowFullPass={openFullScreenPass} />
 
-        <View style={styles.PassScreenActionsLintel}>
-          <OutlineButton
-            label={
-              isMaxBrightness
-                ? 'Maximum Brightness Active'
-                : 'Increase Brightness'
-            }
-            onPress={toggleBrightness}
-            icon="☀️"
-            active={isMaxBrightness}
-            compact
-          />
-          <OutlineButton
-            label="View Entry Rules"
-            onPress={openEntryRules}
-            icon="🛡️"
-            compact
-          />
-        </View>
+      <View style={styles.PassScreenActionsLintel}>
+        <OutlineButton
+          label={
+            isMaxBrightness
+              ? 'Maximum Brightness Active'
+              : 'Increase Brightness'
+          }
+          onPress={toggleBrightness}
+          icon="☀️"
+          active={isMaxBrightness}
+          compact
+        />
+        <OutlineButton
+          label="View Entry Rules"
+          onPress={openEntryRules}
+          icon="🛡️"
+          compact
+        />
+      </View>
 
-        <GuestHelpCard onStartChat={openGuestHelp} />
-      </ScrollView>
-    </View>
+      <GuestHelpCard onStartChat={openGuestHelp} />
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
-  PassScreenFacetChassis: {
-    backgroundColor: colors.surface,
-    flex: 1,
-  },
   PassScreenScrollContent: {
     gap: 14,
     paddingBottom: 16,

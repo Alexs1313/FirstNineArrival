@@ -1,4 +1,4 @@
-package com.firstninearrival
+package com.firstnine.guide.arrival
 
 import android.app.Application
 import com.facebook.react.PackageList

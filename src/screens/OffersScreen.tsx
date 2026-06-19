@@ -5,6 +5,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {OfferListCard} from '../components/offers/OfferCards';
 import {OffersListSavedChip} from '../components/offers/OfferScreenHeader';
+import {SCREEN_HEADER_GRADIENT} from '../components/layout/ScreenBackground';
 import {AFTER_OPENING_OFFERS} from '../data/offers';
 import {useAppNavigation} from '../navigation/NavigationContext';
 import {colors, fonts, layout} from '../constants/theme';
@@ -22,7 +23,7 @@ export function OffersScreen() {
         ]}
         showsVerticalScrollIndicator={false}>
         <LinearGradient
-          colors={['#131228', colors.surface]}
+          colors={[...SCREEN_HEADER_GRADIENT]}
           style={styles.OffersScreenHeaderGradient}>
           <View
             style={[
@@ -62,7 +63,7 @@ export function OffersScreen() {
 
 const styles = StyleSheet.create({
   OffersScreenFacetChassis: {
-    backgroundColor: colors.surface,
+    backgroundColor: 'transparent',
     flex: 1,
   },
   OffersScreenScrollContent: {

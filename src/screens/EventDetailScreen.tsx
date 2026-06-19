@@ -15,6 +15,7 @@ import {
 import {getEventById} from '../data/events';
 import {useEvents} from '../context/EventsContext';
 import {useAppNavigation} from '../navigation/NavigationContext';
+import {colors} from '../constants/theme';
 
 type EventDetailScreenProps = {
   eventId: string;
@@ -93,7 +94,7 @@ export function EventDetailScreen({eventId}: EventDetailScreenProps) {
 
 const styles = StyleSheet.create({
   EventDetailScreenFacetChassis: {
-    backgroundColor: '#0c0b1a',
+    backgroundColor: colors.surface,
     flex: 1,
   },
   EventDetailScreenScrollContent: {

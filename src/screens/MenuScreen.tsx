@@ -5,6 +5,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {MenuListCard} from '../components/menu/MenuCards';
 import {MenuScreenHeader} from '../components/menu/MenuScreenHeader';
+import {SCREEN_HEADER_GRADIENT} from '../components/layout/ScreenBackground';
 import {APP_BRAND_LINE} from '../constants/brand';
 import {OPENING_MENU} from '../data/menu';
 import {useMenu} from '../context/MenuContext';
@@ -24,7 +25,7 @@ export function MenuScreen() {
           {paddingBottom: insets.bottom + layout.screenPadding},
         ]}
         showsVerticalScrollIndicator={false}>
-        <LinearGradient colors={['#131228', colors.surface]}>
+        <LinearGradient colors={[...SCREEN_HEADER_GRADIENT]}>
           <MenuScreenHeader
             eyebrow={APP_BRAND_LINE}
             title="Opening Menu"
@@ -50,7 +51,7 @@ export function MenuScreen() {
 
 const styles = StyleSheet.create({
   MenuScreenFacetChassis: {
-    backgroundColor: colors.surface,
+    backgroundColor: 'transparent',
     flex: 1,
   },
 

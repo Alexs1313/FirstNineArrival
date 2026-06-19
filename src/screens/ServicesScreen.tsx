@@ -12,6 +12,7 @@ import {
 } from '../components/services/ServiceCards';
 import {MyRequestsChipButton} from '../components/services/ServiceBadges';
 import {PrimaryButton} from '../components/buttons/PrimaryButton';
+import {SCREEN_HEADER_GRADIENT} from '../components/layout/ScreenBackground';
 import {
   TAXI_QUICK_OPTIONS,
   VEHICLE_OPTIONS,
@@ -59,7 +60,7 @@ export function ServicesScreen() {
         showsVerticalScrollIndicator={false}
         keyboardShouldPersistTaps="handled">
         <LinearGradient
-          colors={['#131228', colors.surface]}
+          colors={[...SCREEN_HEADER_GRADIENT]}
           style={styles.ServicesScreenHeaderGradient}>
           <View
             style={[
@@ -177,13 +178,14 @@ export function ServicesScreen() {
 
 const styles = StyleSheet.create({
   ServicesScreenFacetChassis: {
-    backgroundColor: colors.surface,
+    backgroundColor: 'transparent',
     flex: 1,
   },
   ServicesScreenScrollContent: {
     gap: 0,
   },
 
+  ServicesScreenHeaderGradient: {},
   ServicesScreenHeaderInset: {
     paddingBottom: 16,
     paddingHorizontal: layout.screenPadding,

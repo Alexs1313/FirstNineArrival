@@ -4,7 +4,7 @@ export const PASS_DETAILS = {
   validity: 'Opening Night',
   accessType: 'Launch Event',
   status: 'Active',
-  eventLabel: 'FIRST NINE ARRIVAL GUEST',
+  eventLabel: 'FIRST NINE GUIDE ARRIVAL',
   passTitle: 'Opening Event Pass',
   dateLabel: 'Jun 16, 2026',
 } as const;

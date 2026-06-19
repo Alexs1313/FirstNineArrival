@@ -5,6 +5,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 
 import {EventListCard} from '../components/events/EventCards';
 import {SavedChipButton} from '../components/events/SavedChipButton';
+import {SCREEN_HEADER_GRADIENT} from '../components/layout/ScreenBackground';
 import {OPENING_EVENTS} from '../data/events';
 import {useAppNavigation} from '../navigation/NavigationContext';
 import {colors, fonts, layout} from '../constants/theme';
@@ -22,7 +23,7 @@ export function EventsScreen() {
         ]}
         showsVerticalScrollIndicator={false}>
         <LinearGradient
-          colors={['#131228', colors.surface]}
+          colors={[...SCREEN_HEADER_GRADIENT]}
           style={styles.EventsScreenHeaderGradient}>
           <View
             style={[
@@ -62,7 +63,7 @@ export function EventsScreen() {
 
 const styles = StyleSheet.create({
   EventsScreenFacetChassis: {
-    backgroundColor: colors.surface,
+    backgroundColor: 'transparent',
     flex: 1,
   },
   EventsScreenScrollContent: {

@@ -1,4 +1,4 @@
-package com.firstninearrival
+package com.firstnine.guide.arrival
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

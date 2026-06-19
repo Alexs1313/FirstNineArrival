@@ -1,6 +1,7 @@
 import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
+import {ScreenBackground} from '../components/layout/ScreenBackground';
 import {TabBar} from '../components/nav/TabBar';
 import {AddedToOrderScreen} from '../screens/AddedToOrderScreen';
 import {EntryRulesScreen} from '../screens/EntryRulesScreen';
@@ -110,17 +111,17 @@ function MainShell() {
 
   return (
     <View style={styles.AppShellFacetChassis}>
-      <View style={styles.AppShellContent}>
-        <TabContent />
-      </View>
+      <ScreenBackground>
+        <View style={styles.AppShellContent}>
+          <TabContent />
+        </View>
+      </ScreenBackground>
       {overlay.type !== 'none' && (
         <View style={styles.AppShellOverlay}>
           <OverlayContent />
         </View>
       )}
-      {showTabBar && (
-        <TabBar activeTab={activeTab} onSelectTab={selectTab} />
-      )}
+      {showTabBar && <TabBar activeTab={activeTab} onSelectTab={selectTab} />}
     </View>
   );
 }

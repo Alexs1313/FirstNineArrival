@@ -8,7 +8,7 @@ export const INITIAL_CHAT: ChatMessage[] = [
   {
     id: 'welcome',
     role: 'assistant',
-    text: "Hello! How can I help with your First Nine Arrival Guest visit today? I'm here to support your opening night experience.",
+    text: "Hello! How can I help with your First Nine Guide Arrival visit today? I'm here to support your opening night experience.",
   },
 ];
 
